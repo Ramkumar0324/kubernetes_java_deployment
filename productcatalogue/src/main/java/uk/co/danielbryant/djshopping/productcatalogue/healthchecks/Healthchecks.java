@@ -6,7 +6,7 @@ import org.springframework.web.bin.annotation.RestController;
 
 @RestController
 public class healthcheck {
-    @GetMapping("/healthcheckSM")
+    @GetMapping("/healthcheckPC")
 	public String healthcheck() {
 	    return "Hello User this response from Stock Maanger !! " + new Date();
 	}
