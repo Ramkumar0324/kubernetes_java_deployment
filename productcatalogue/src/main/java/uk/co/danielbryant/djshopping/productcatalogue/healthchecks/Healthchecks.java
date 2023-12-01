@@ -1,4 +1,4 @@
-package uk.co.danielbryant.djshopping.productcatalogue.healthchecks;
+package uk.co.danielbryant.djshopping.productcatalogue;
 
 import java.util.Date;
 import org.springframework.web.bin.annotation.GetMapping;
