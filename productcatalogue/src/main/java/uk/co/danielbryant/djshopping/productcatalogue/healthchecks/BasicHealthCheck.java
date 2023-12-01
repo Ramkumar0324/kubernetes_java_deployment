@@ -1,17 +1,13 @@
 package uk.co.danielbryant.djshopping.productcatalogue.healthchecks;
 
-import com.codahale.metrics.health.HealthCheck;
+import java.util.Date;
+import org.springframework.web.bin.annotation.GetMapping;
+import org.springframework.web.bin.annotation.RestController;
 
-public class BasicHealthCheck extends HealthCheck {
-
-    private final String version;
-
-    public BasicHealthCheck(String version) {
-        this.version = version;
-    }
-
-    @Override
-    protected Result check() throws Exception {
-        return Result.healthy("Ok with version: " + version);
-    }
+@RestController
+public class healthcheck {
+    @GetMapping("/healthcheckSM")
+	public String healthcheck() {
+	    return "Hello User this response from Stock Maanger !! " + new Date();
+	}
 }
